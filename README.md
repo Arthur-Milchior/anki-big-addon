@@ -7,3 +7,12 @@ I may add other add-on in this one later, if required because of incompatibiliti
 * [Quicker Anki: 802285486](https://ankiweb.net/shared/info/802285486)
 * [Explaining deletion 12287769](https://ankiweb.net/shared/info/12287769)
 * [Database checker/fixer explained, more fixers 1135180054](https://ankiweb.net/shared/info/1135180054)
+
+
+Key         |Value
+------------|-------------------------------------------------------------------
+Copyright   | Arthur Milchior <arthur@milchior.fr>
+Based on    | Anki code by Damien Elmes <anki@ichi2.net>
+License     | GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
+Source in   | https://github.com/Arthur-Milchior/anki-big-addon
+Addon number| [???????](https://ankiweb.net/shared/info/???????)
