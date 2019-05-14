@@ -127,11 +127,11 @@ def fixOdueType1(self, problems):
 
 def fixOdueQueue2(self, problems):
     (template(
-        f"select id, nid from cards where odue > 0 and queue={CARD_DUE}) and not odid",
+        f"select id, nid from cards where odue > 0 and queue={CARD_DUE} and not odid",
         "set odue of card {} of note {} to 0, because it was positive while queue was 2 (i.e. in the review queue).",
         "Fixed %d card with invalid properties.",
-        "Fixed %d cards with invalid properties."),
-         lambda lines:(self.db.execute("update cards set odue=0 where id in "+ids2str([line[0] for line in lines])))
+        "Fixed %d cards with invalid properties.",
+         lambda lines:(self.db.execute("update cards set odue=0 where id in "+ids2str([line[0] for line in lines]))))
     )(self, problems)
 
 
@@ -147,7 +147,7 @@ def fixOdidOdue(self, problems):
     )
     )(self, problems)
 
-def intermiediate(self, problems):
+def intermediate(self, problems):
     # tags
     self.tags.registerNotes()
     # field cache

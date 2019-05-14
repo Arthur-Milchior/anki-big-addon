@@ -1,4 +1,5 @@
 from aqt.browser import *
+from anki.lang import _
 
 def _deleteNotes(self):
     # only diff: adding reason
