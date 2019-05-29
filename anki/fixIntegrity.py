@@ -229,6 +229,7 @@ def doubleCard(self, problems):
 
 
 def fixIntegrity(self):
+    print("fix integrity")
     """Find the problems which will be found. Then call last fixing."""
     #differences: not recomputing models' req. Giving reason to deletion
     problems = []
@@ -257,14 +258,15 @@ def fixIntegrity(self):
         fun(self,problems)
 
 
-        # and finally, optimize
-        self.optimize()
-        newSize = os.stat(self.path)[stat.ST_SIZE]
-        txt = _("Database rebuilt and optimized.")
-        ok = not problems
-        problems.append(txt)
-        # if any problems were found, force a full sync
-        if not ok:
-            self.modSchema(check=False)
-        self.save()
+    # and finally, optimize
+    self.optimize()
+    newSize = os.stat(self.path)[stat.ST_SIZE]
+    txt = _("Database rebuilt and optimized.")
+    ok = not problems
+    print("Adding in fixIntegrity.py")
+    problems.append(txt)
+    # if any problems were found, force a full sync
+    if not ok:
+        self.modSchema(check=False)
+    self.save()
     return ("\n".join(problems), ok)
