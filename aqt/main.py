@@ -20,7 +20,7 @@ def onRemNotes(self, col, nids, reason=""):
             if getUserOption("deletion log in CSV", True):
                 writer = csv.writer(f)
             if not existed:
-                f.write(b"reason\tdeletion time id\thuman deletion time\tid\tmid\tfields\t\n")#difference: more fields
+                f.write("reason\tdeletion time id\thuman deletion time\tid\tmid\tfields\t\n")#difference: more fields
             for id, mid, flds in col.db.execute(
                     "select id, mid, flds from notes where id in %s" %
                 ids2str(nids)):
