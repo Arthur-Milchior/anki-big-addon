@@ -17,7 +17,7 @@ def rem(self, did, cardsToo=False, childrenToo=True):
         ChildrenToo -- if set to false,
         """
         deck = self.get(did)#new
-        dname = deck.get('name')# new
+        dname = deck.get('name', default = False)# new
         if str(did) == '1':
             # we won't allow the default deck to be deleted, but if it's a
             # child of an existing deck then it needs to be renamed
@@ -28,7 +28,7 @@ def rem(self, did, cardsToo=False, childrenToo=True):
                     # find an unused name
                     name = base + suffix
                     if not self.byName(name):
-                        dname = name
+                        deck['name'] = name
                         self.save(deck)
                         break
                     suffix += "1"
