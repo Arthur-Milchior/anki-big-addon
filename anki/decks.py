@@ -16,8 +16,8 @@ def rem(self, did, cardsToo=False, childrenToo=True):
         cardsToo -- if set to true, delete its card.
         ChildrenToo -- if set to false,
         """
-        deck = self.get(did)#new
-        dname = deck.get('name', default = False)# new
+        deck = self.get(did, default = False)#new
+        dname = deck.get('name')# new
         if str(did) == '1':
             # we won't allow the default deck to be deleted, but if it's a
             # child of an existing deck then it needs to be renamed
