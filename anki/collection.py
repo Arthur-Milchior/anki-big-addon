@@ -9,6 +9,7 @@ from anki.consts import *
 from ..consts import *
 from anki.lang import _
 from aqt import mw
+import sys
 @debugFun
 def genCards(self, nids, changedOrNewReq = None):
     #new parameter: changedOrNewReq
