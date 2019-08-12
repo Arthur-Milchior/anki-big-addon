@@ -231,10 +231,11 @@ def doubleCard(self, problems):
 
 def checkDeck(self):
     """check that autoplay is set in all deck object"""
+    dynDecks = [deck for deck in self.decks.all(sort=False) if not deck['dyn']]
     for paramsSet, defaultParam, what, kind in [(self.decks.dconf.values(), defaultDeckConf, "'s option", "deck configuration"),
-                                                (self.decks.all(sort=False, standard=True, dyn=False), defaultDeck, "", "standard deck"),
-                                                (self.decks.all(sort=False, standard=False, dyn=True), defaultDynamicDeck, " (dynamic)", "dynamic deck"),
-                                                (self.decks.all(sort=False, standard=False, dyn=True), defaultDeckConf, " (dynamic)", "dynamic deck as conf"),
+                                                (self.decks.all(sort=False), defaultDeck, "", "standard deck"),
+                                                (dynDecks, standard=False, dyn=True), defaultDynamicDeck, " (dynamic)", "dynamic deck"),
+                                                (dynDecks, defaultDeckConf, " (dynamic)", "dynamic deck as conf"),
     ]:
         for key in defaultParam:
             for params in paramsSet:
