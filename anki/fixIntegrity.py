@@ -229,12 +229,13 @@ def doubleCard(self, problems):
         self.remCards(toRemove)
 
 
-def checkDeck(self):
-    """check that autoplay is set in all deck object"""
-    dynDecks = [deck for deck in self.decks.all(sort=False) if not deck['dyn']]
+def checkDeck(self, problems):
+    """check that all default confs/decks option are set in all deck's related object"""
+    dynDecks = [deck for deck in self.decks.all() if deck['dyn']]
+    standardDecks = [deck for deck in self.decks.all() if not deck['dyn']]
     for paramsSet, defaultParam, what, kind in [(self.decks.dconf.values(), defaultDeckConf, "'s option", "deck configuration"),
-                                                (self.decks.all(sort=False), defaultDeck, "", "standard deck"),
-                                                (dynDecks, standard=False, dyn=True), defaultDynamicDeck, " (dynamic)", "dynamic deck"),
+                                                (standardDecks, defaultDeck, "", "standard deck"),
+                                                (dynDecks, defaultDynamicDeck, " (dynamic)", "dynamic deck"),
                                                 (dynDecks, defaultDeckConf, " (dynamic)", "dynamic deck as conf"),
     ]:
         for key in defaultParam:
@@ -242,7 +243,7 @@ def checkDeck(self):
                 if key not in params:
                     params[key] = defaultParam[key]
                     self.decks.save(params)
-                    self.problems.append(f"Adding some «{key}» which was missing in deck{what} {params['name']}")
+                    problems.append(f"Adding some «{key}» which was missing in deck{what} {params['name']}")
 
 def fixIntegrity(self):
     print("fix integrity")
