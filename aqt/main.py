@@ -1,9 +1,11 @@
 import csv
-import os
-from aqt.main import *
-from ..config import getUserOption
-from anki.utils import intTime, splitFields
 import datetime
+import os
+
+from anki.utils import intTime, splitFields
+from aqt.main import *
+
+from ..config import getUserOption
 
 
 def onRemNotes(self, col, nids, reason=""):

@@ -1,1 +1,1 @@
-from . import collection, decks, sched, sync, models
+from . import collection, decks, models, sched, sync

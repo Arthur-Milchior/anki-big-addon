@@ -1,2 +1,2 @@
 rm big.zip
-zip -r big.zip */*py config.* *py  LICENSE *.md zipping --exclude \*~ \*zip *pyc
+zip -r big.zip aqt/*py anki/*py config.* *py  LICENSE *.md zipping --exclude \*~ \*zip *pyc

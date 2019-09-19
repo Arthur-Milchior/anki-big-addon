@@ -1,6 +1,7 @@
-from aqt.models import Models
-from aqt.utils import getText
-from aqt.models import AddModel
+from anki.lang import _
+from aqt.models import AddModel, Models
+from aqt.utils import getText, saveGeom
+
 
 def onRename(self):
     """Ask the user for a new name for the model. Save it."""

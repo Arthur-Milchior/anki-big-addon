@@ -1,14 +1,18 @@
+import os
+import stat
+
+from anki.cards import Card
 from anki.collection import _Collection
 from anki.consts import *
-from ..consts import *
-from anki.decks import defaultConf as defaultDeckConf, defaultDynamicDeck, defaultDeck
+from anki.decks import defaultConf as defaultDeckConf
+from anki.decks import defaultDeck, defaultDynamicDeck
 from anki.lang import _, ngettext
 from anki.utils import ids2str, intTime
 from aqt import mw
-from anki.cards import Card
+
 from ..config import getUserOption
-import os
-import stat
+from ..consts import *
+
 
 def integrity(self):
     # whether sqlite find a problem in its database

@@ -1,5 +1,6 @@
 from aqt.editor import Editor
 
+
 def saveAddModeVars(self):
     """During creation of new notes, save tags to the note's model"""
     # State that the requirements of the current model should not be recomputed.

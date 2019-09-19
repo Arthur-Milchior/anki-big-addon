@@ -1,15 +1,19 @@
-from anki.collection import  *
-from anki.collection import  _Collection
-from anki.utils import ids2str, maxID, intTime
-from ..debug import debugFun
 import os
-from .fixIntegrity import fixIntegrity
 import stat
-from anki.consts import *
-from ..consts import *
-from anki.lang import _
-from aqt import mw
 import sys
+
+from anki.collection import *
+from anki.collection import _Collection
+from anki.consts import *
+from anki.lang import _
+from anki.utils import ids2str, intTime, maxID
+from aqt import mw
+
+from ..consts import *
+from ..debug import debugFun
+from .fixIntegrity import fixIntegrity
+
+
 @debugFun
 def genCards(self, nids, changedOrNewReq = None):
     #new parameter: changedOrNewReq

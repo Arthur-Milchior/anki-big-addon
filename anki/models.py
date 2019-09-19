@@ -1,9 +1,12 @@
-from anki.models import *
-from anki.utils import intTime, splitFields
+import re
+
 from anki.consts import *
 from anki.hooks import runHook
+from anki.models import *
+from anki.utils import intTime, splitFields
+
 from ..debug import debugFun
-import re
+
 
 @debugFun
 #new function

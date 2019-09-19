@@ -1,4 +1,6 @@
 from anki.sync import *
+
+
 def remove(self, graves):
     #only dif: log the reason of removal.
         # pretend to be the server so we don't set usn = -1

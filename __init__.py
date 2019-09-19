@@ -1,1 +1,1 @@
-from . import anki, aqt
+#from . import anki, aqt

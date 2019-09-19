@@ -1,9 +1,11 @@
+import copy
+
+from anki.lang import _, ngettext
+from anki.sound import clearAudioQueue
 from aqt.clayout import CardLayout
 from aqt.qt import *
-from anki.lang import _
-from aqt.utils import showWarning, askUser, showInfo, getOnlyText, saveGeom
-from anki.sound import clearAudioQueue
-import copy
+from aqt.utils import askUser, getOnlyText, saveGeom, showInfo, showWarning
+
 from ..debug import debugFun
 
 """

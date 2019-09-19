@@ -1,5 +1,6 @@
-from aqt.sync import *
 from anki.lang import _
+from aqt.sync import *
+
 
 def _checkFailed(self, event):
     #difference is that this method takes as parameter the event

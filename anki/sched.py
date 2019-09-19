@@ -1,7 +1,8 @@
+import random
+
 from anki.sched import Scheduler
 from anki.schedv2 import Scheduler as SchedV2
 from anki.utils import ids2str, intTime
-import random
 
 CARD_NEW = 0
 

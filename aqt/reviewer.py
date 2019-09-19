@@ -1,5 +1,7 @@
-from aqt.reviewer import *
 from anki.lang import _
+from aqt.reviewer import *
+
+
 def onDelete(self):
     # only diff: adding a reason for deletion
         # need to check state because the shortcut is global to the main

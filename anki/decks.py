@@ -1,6 +1,8 @@
-from ..debug import debug
 from anki.consts import *
 from anki.decks import *
+
+from ..debug import debug
+
 
 def rem(self, did, cardsToo=False, childrenToo=True):
         #difference:simplifying a little bit the code

@@ -1,7 +1,8 @@
-from aqt.fields import FieldDialog
-from aqt.utils import  getOnlyText, showWarning
-from aqt.qt import *#for QDialog
 import copy
+
+from aqt.fields import FieldDialog
+from aqt.qt import *  # for QDialog
+from aqt.utils import getOnlyText, showWarning
 
 """Similar to the former FieldDialog class. With the following:
 originalModel -- a copy of the model, before the change. To allow  were changed and limit the recomputation to do"""

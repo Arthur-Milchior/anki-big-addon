@@ -8,10 +8,6 @@ I may add other add-on in this one later, if required because of incompatibiliti
 * [Explaining deletion 12287769](https://ankiweb.net/shared/info/12287769)
 * [Database checker/fixer explained, more fixers 1135180054](https://ankiweb.net/shared/info/1135180054)
 
-# Warning
-This add-on has a compatibility issue with [night mode](https://ankiweb.net/shared/info/1496166067), go to «View → Night Mode → Choose what to style» and deactivate Night Mode for Clayout. It would solve the problem.
-
-
 
 Key         |Value
 ------------|-------------------------------------------------------------------
@@ -20,4 +16,4 @@ Based on    | Anki code by Damien Elmes <anki@ichi2.net>
 License     | GNU AGPL, version 3 or later; http://www.gnu.org/licenses/agpl.html
 Source in   | https://github.com/Arthur-Milchior/anki-big-addon
 Addon number| [777545149](https://ankiweb.net/shared/info/777545149)
-Support me on| [![Ko-fi](https://ko-fi.com/img/Kofi_Logo_Blue.svg)](https://Ko-fi.com/arthurmilchior) or [![Patreon](http://www.milchior.fr/patreon.png)](https://www.patreon.com/bePatron?u=146206)
+Support me on| [![Ko-fi](https://ko-fi.com/img/Kofi_Logo_Blue.svg)](Ko-fi.com/arthurmilchior) or [![Patreon](http://www.milchior.fr/patreon.png)](https://www.patreon.com/bePatron?u=146206)
