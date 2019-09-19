@@ -19,3 +19,9 @@ def modelChanged(self):
     idx = self.form.modelsList.currentRow()
     self.model = self.models[idx]
 Models.modelChanged = modelChanged
+
+def reject(self):
+        self.mw.reset()
+        saveGeom(self, "models")
+        QDialog.reject(self)
+Models.reject = reject
