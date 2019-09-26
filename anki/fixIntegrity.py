@@ -232,6 +232,17 @@ def doubleCard(self, problems):
     if toRemove:
         self.remCards(toRemove)
 
+def uniqueGuid(self, problems):
+    lastGuid = None
+    nids = []
+    lastNid = None
+    for guid, nid in mw.col.db.all("select guid, id from notes order by guid"):
+        if lastGuid == guid:
+            mw.col.db.execute("update notes set guid = ? where id = ? ", guid64(), nid)
+            nids.append((nid,lastNid))
+            problems.append(f"The guid of note {nid} has been changed because it used to be the guid of note {lastNid}")
+        lastGuid = guid
+        lastNid = nid
 
 def checkDeck(self, problems):
     """check that all default confs/decks option are set in all deck's related object"""
@@ -276,6 +287,7 @@ def fixIntegrity(self):
                 fixFloatDue,
                 doubleCard,
                 checkDeck,
+                uniqueGuid,
     ]:
         fun(self,problems)
 
