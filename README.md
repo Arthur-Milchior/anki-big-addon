@@ -1,5 +1,5 @@
 I created three add-ons which are incompatible, mostly because they
-edit the same module. So this add-on only purpose is two allow many
+edit the same module. So this add-on only purpose is to allow many
 add-ons to be used simultaneously.
 
 I may add other add-on in this one later, if required because of incompatibilities.
